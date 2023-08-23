@@ -41,7 +41,7 @@ app.post('/create-payment', async (req, res) => {
 
       const paymentIntent = await stripe.paymentIntents.create({
           amount,
-          currency: 'usd',
+          currency: 'usd , inr',
           payment_method_types: ['card'],
           description: 'successful payment',
           shipping: {
